@@ -1,0 +1,127 @@
+----------------------------------Exercise 1----------------------------------
+
+Create `Hamster` as a `data class` with a constructor parameter of `val name:
+String`.
+
+Now create a class `HamsterCageException` that inherits `Exception`.
+`HamsterCageException` takes a constructor parameter `val msg: String` and
+overrides `toString()` to produce `"HamsterCageException: $msg"`. Create three
+exceptions inherited from `HamsterCageException`:
+
+- `CageFullException(val limit: Int)`: Calls the base-class constructor
+  with `"Cage full > $limit"`.
+
+- `NoSuchHamsterException(val id: String)`: Calls the base-class constructor
+  with `"No Hamster $id"`.
+
+- `OutOfWaterException`: Calls the base-class constructor
+  with `"Cage out of water"`.
+
+Create class `HamsterCage(val capacity: Int)`. You can't put another `Hamster`
+in a `HamsterCage` if it has reached `capacity`.
+
+In `HamsterCage`, store the `Hamsters` in a `HashSet`. Write the following
+member functions:
+
+- `add(h: Hamster)` throws `CageFullException(capacity)` if the cage has
+  reached `capacity`.
+
+- `get(name: String)` throws `NoSuchHamsterException(name)` if a `Hamster` by
+  that `name` can't be found.
+
+- `feed()` generates a random number between 0 and 10 and throws
+  `OutOfWaterException()` if the result is greater than 8. If it succeeds, it
+  returns `"Feeding complete"`.
+
+The starter code contains an initialized `List` of `Hamsters`. Write a
+function `test(hc: HamsterCage)` that exercises each member function:
+
+- `add()` by attempting to add each object in `hamsters`.
+
+- `get()` using the first `name` in `hamsters`, then use `"Morty"`.
+
+- Call `feed()` three times.
+
+`test()` calls `trace()` for any operation that produces a result. In each
+case, catch the potential exception, and call `trace()` on that exception.
+
+`main()` contains starter code passing a `HamsterCage` to `test()`, and the
+expected output for `trace`.
+
+Consider the complexity of the resulting code, and evaluate which exceptions
+could be replaced with ordinary non-exceptional code.
+
+----------------------------------Exercise 2----------------------------------
+
+The starter code defines an exception hierarchy and three functions:
+
+- `findNumber(s: String)` searches `s` and returns a `String` containing a
+  number. It throws `NoNumber` if no number is found.
+
+- `convertNumber(s: String)` converts `s` to an `Int`. It throws `BadNumber` if
+  `s` cannot be converted to an `Int`.
+
+- `embedNumber(n: Int)` produces a `String` containing `n` within some letters.
+
+Your job is to define two functions:
+
+- `justFail(s: String)` calls the above three functions, nesting calls within
+  calls. It finds a number within a `String`, converts it to an `Int`, embeds
+  that `Int` inside a `String, and calls `trace()` with the result.
+
+- `recover(s: String)` calls each of the above functions one at a time,
+  recovering from any failures after each call so the next call can be
+  successful. If `findNumber()` fails, the recovery produces the `String` `"0"`.
+  If `convertNumber()` fails, the recovery produces `-1`. At the end of of
+  `recover()`, call `trace()` with the result.
+
+The remaining starter code tests the above two functions.
+
+Notice the potential effects produced by exceptions:
+
+1. If a function might produce one or more exceptions, calls to that function
+can be significantly more complicated.
+
+2. The concept of recovery assumes that there's a *way* you can recover from a
+failed function call. Often, however, this is simply not true.
+
+----------------------------------Exercise 3----------------------------------
+
+The starter code contains a `DataBase` class and associated exceptions, and a
+`NetConnection` class and associated exceptions. There's also a `Status`
+enumeration to report `Success` and `Failed` as an alternative to exceptions.
+
+Your goal is to complete the `transact()` function, which contains references
+to a `DataBase` and two `NetConnection`s. The starter code shows how to open
+the `DataBase`.
+
+In the nested function `transfer(net: NetConnection): Status` you must write
+code to open `net`, read from it, and write the results to the `DataBase`. You
+must also catch exceptions and return `Failed` if any occur. As the last part
+of `transfer()`, the `finally` clause closes `net` and handles exceptions from
+that. If you successfully make it through `transfer()`, it returns `Success`.
+
+The remainder of `transact()` calls `transfer()` for each of the
+`NetConnection` objects, checking the result and returning `Failed` from
+`transact()` if `transfer()` returns `Failed`. Lastly, a `finally` clause
+attempts to close the `DataBase` object.
+
+Many of the member functions for `DataBase` and `NetConnection` take parameters
+of `id: Int` and `level: Int`. The `id` is a different number for each
+different call, and `transact()` takes a `level` parameter that is passed to
+each call. In the member function definitions you'll see that the `id` is
+compared to `level` to decide whether to throw an exception. This way, all the
+different exception possibilities are tested one at a time, by passing
+different values of `level` in `main()`'s starter code.
+
+You must consider whether an operation throws an exception, *and* if you can do
+anything to recover from that exception. For example, if opening the database
+fails inside `transact()`, we haven't lost any data, so we can just `return
+Failed` and the program can try again. But if closing the database fails, it
+means we don't know the state of the database and should probably throw the
+exception rather than returning `Failed`. In contrast, a failure when closing a
+network connection isn't particularly problematic.
+
+Again, notice how rapidly things get complicated when attempting to recover
+from all possible failures.
+

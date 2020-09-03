@@ -1,0 +1,31 @@
+----------------------------------Exercise 1----------------------------------
+
+Create an exception class called `Failure` that takes a `msg: String` parameter
+and passes it to the base-class constructor. Write a function `fail(msg:
+String)` that passes `msg` to `trace()`, and then throws a `Failure`.
+
+Now write your own versions of `require()` and `check()` (from [Check
+Instructions](#check-instructions)) that use `fail()`. The starter code in
+`main()` tests your functions.
+
+----------------------------------Exercise 2----------------------------------
+
+Modify Exercise 1 by creating an `object Log` that contains a `private` mutable
+`List` containing `String`s called `messages`, and two functions:
+
+- `add(msg: String)`: Adds `msg` to `messages`
+
+- `report()`: Produces a non-modifiable copy of `messages`
+
+In `fail()`, add the `msg` to `Log` before throwing `Failure`. The starter
+code in `main()` tests your work.
+
+----------------------------------Exercise 3----------------------------------
+
+Create `Failure` and `fail()` as in the previous two exercises, but do not call
+`trace()` in `fail()`. Add a `private var _debug` at file scope, and initialize
+it to `true`. Define `fun debug(test: Boolean)` so that it always calls
+`trace()` to verify that it was called (see the starter code in `main()` to
+discover the format of the `trace()` message), but only performs the `debug()`
+activity if `_debug` is `true`. The starter code in `main()` tests your work.
+

@@ -1,0 +1,22 @@
+----------------------------------Exercise 1----------------------------------
+
+Modify `TypeCheck3.kt` by moving `rotate()` into `Shape` and returning `Shape`
+to an `interface`. Notice how `turn()` becomes much cleaner.
+
+----------------------------------Exercise 2----------------------------------
+
+Add a `DecomposableBottle` to both `BeverageContainer2.kt` (remove `recycle()`)
+and `BeverageContainer3.kt`. `DecomposableBottle`'s recycling `String` is
+"Decomposition tank".
+
+Notice the different experience between the two examples.
+
+----------------------------------Exercise 3----------------------------------
+
+Modify `Insects.kt` so that `Insect` is a `sealed` class (this may require
+modifications to other components). Change `basic()` to use a `when`
+expression.
+
+What does this gain you, since the `else` clauses in the `when` expressions
+still make sense?
+

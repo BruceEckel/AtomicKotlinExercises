@@ -1,0 +1,35 @@
+----------------------------------Exercise 1----------------------------------
+
+Create a generic interface called `Items` with a single function `next()` that
+returns an object of the generic type, or `null`. Make `Items` usable for
+[SAM conversions](#sam-conversions).
+
+Create a generic function called `itemIter()` that takes a `vararg items` of
+the type parameter and returns an `Items` object produced with a SAM
+conversion. The `Items` object closes over a `var index` to indicate the
+current element in `items`. Each call to `next()` produces the current element
+and increments `index`. When there are no more `items`, `next()` returns
+`null`.
+
+The code in `main()` tests your solution.
+
+----------------------------------Exercise 2----------------------------------
+
+Create a generic class `CrateList` that inherits from an `ArrayList` of
+`Crate`. `Crate` has no `toString()`. To solve this problem, create a nested
+`private` class called `DecoratedCrate` that takes a generic argument of
+`contents` and inherits from `Crate`. Add a `toString()` to `DecoratedCrate`
+that produces a `String` consisting of the result of calling `get()` inside
+square brackets.
+
+Define a member function `add()` that takes a generic `item` argument, creates
+a `DecoratedCrate` with it and adds the result to the `ArrayList`. The code in
+`main()` tests your solution.
+
+----------------------------------Exercise 3----------------------------------
+
+Convert `InCrate` and `OutCrate` to interfaces. Create a new version of `Crate`
+that implements both `InCrate` and `OutCrate`. The code in `main()` tests your
+solution by upcasting from `Crate<Grape>` to `OutCrate<Can>` and from
+`Crate<Can>` to `InCrate<Grape>`.
+

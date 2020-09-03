@@ -1,0 +1,45 @@
+----------------------------------Exercise 1----------------------------------
+
+The starter code includes `class Level`, which is the solution of Exercise 3
+from [Check Instructions](#check-instructions).
+
+Create a class called `Pipe` that takes `val level: Level` as a constructor
+parameter. Give this parameter a default argument with a range `0..10`.
+
+Inside `Pipe`, define a `val logger` with an associated file `"PipeLog.txt"`.
+Create a member function `checkLevel()` that uses a `when` expression. When
+`value` is:
+
+- 2: call `trace()`
+- 4: call `debug()`
+- 6: call `info()`
+- 8: call `warn()`
+- 10: call `error()`
+
+The log message for each call is just "Level " followed by the matched value.
+The starter code in `main()` tests your solution.
+
+----------------------------------Exercise 2----------------------------------
+
+Starting with the solution from Exercise 3 in [Exception
+Handling](#exception-handling), use `AtomicLog.kt` to log exceptions into the
+`Logger` file `"LoggingSoln1.txt"`. You will need to modify `transact()`:
+
+- Add a call to `Logger`s `error()` function before any exception is thrown
+  from `transact()`.
+
+- Replace unrecoverable exceptions with `error()` calls.
+
+- Look for code where none of the exceptions are recoverable, and compact it if
+  you can to log to `error()` and fail, rather than having multiple `catch`
+  clauses.
+
+----------------------------------Exercise 3----------------------------------
+
+Add logging levels to `AtomicLog.kt`. Create an enumeration `Level` with values
+`Trace`, `Debug`, `Info`, `Warn` and `Error`. Add an instance of this `enum`
+called `debugLevel` at file scope, initialized to `Error`. Inside your new
+`Logger` class, modify the `log()` function so its signature is `private fun
+log(thisLevel: Level, msg: String)`. This will require small modifications to
+some other functions. The code in `main()` tests your solution.
+

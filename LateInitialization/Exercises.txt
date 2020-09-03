@@ -1,0 +1,50 @@
+----------------------------------Exercise 1----------------------------------
+
+Start with an empty `PowerPlant` interface, and from that create classes
+`ElectricMotor` and `CombustionEngine`. Create a `Vehicle` class containing
+a `lateinit` property `powerPlant`.
+
+Create a `lateinit` `car` at file scope, and a `lateinit` `truck` inside
+`main()`. Initialize `car` inside `main()`, giving it an electric motor,
+then initialize `truck`, giving it a combustion engine.
+
+----------------------------------Exercise 2----------------------------------
+
+Create a class `A` containing a `lateinit` `String` called `s`, and a function
+`initialize()` that sets `s` to "Initialized" and returns `this`.
+
+Create a class `B` that contains a property `a` that uses `lazy` initialization
+to create and initialize an `A`. The code in `main()` tests your solution.
+
+If `A` is the library someone else has created and that you are consuming,
+`lazy` initialization can be a convenient way to configure its `lateinit`
+properties.
+
+----------------------------------Exercise 3----------------------------------
+
+The starter code provides:
+
+data class Generator(val id: Int)
+
+class Turbine(val id: Int) {
+  private lateinit var _generator: Generator
+  val generator: Generator
+...
+
+Add a `get()` for `generator` that checks to see if `_generator` has been
+initialized, and if not initializes it before returning `_generator`. Add a
+`toString()` that starts with "Generator $id running: " and then indicates
+if the generator is running.
+
+The starter code provides:
+
+class PowerPlant(nTurbines: Int = 4) {
+  private val turbines: List<Turbine> =
+...
+
+Finish the initialization for `turbines`, then add
+`fun generator(number: Int): Generator` which checks to make sure `number`
+is in range, then returns the desired generator. Finally, add a `status()`
+member function that uses `forEach` to show the status of each generator in the
+`PowerPlant`. The code in `main()` tests your solution.
+
