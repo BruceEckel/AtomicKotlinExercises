@@ -1,0 +1,25 @@
+----------------------------------Exercise 1----------------------------------
+
+The starter code contains an `open` class `Cleanser` and a class `Detergent`
+that inherits it. Add to the `Cleanser` class the property
+`var ops: MutableList<String>` and the functions `dilute()`, `apply()` and
+`scrub()` that simply add their names to `ops`. In `main`, make sure that
+`Detergent` has now the same functions as `Cleanser`.
+
+----------------------------------Exercise 2----------------------------------
+
+Inherit a class called `Disinfectant` from `Detergent` and add a new function
+called `sterilize()`, following the same pattern as the other functions.
+
+----------------------------------Exercise 3----------------------------------
+
+The starter code contains the class hierarchy:
+
+- `Game`
+- `BoardGame` which inherits from `Game`
+- `Chess` which inherits from `BoardGame`
+
+Add a property `val initOrder = mutableListOf<String>()` to `Game`. Give each
+class an `init` clause that appends its class name to `initOrder`. Now create a
+`Chess` object and show the order of initialization of base classes.
+

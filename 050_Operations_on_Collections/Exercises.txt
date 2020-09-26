@@ -1,0 +1,32 @@
+----------------------------------Exercise 1----------------------------------
+
+The starter code defines a `Person` class with a `name` and `age`. Define the
+function `findOldest(people: List<Person>, quantity: Int)` so it returns a
+`List<String>` containing `quantity` of the `Person`s in `people`. The
+resulting `List` contains names in alphabetical order.
+
+----------------------------------Exercise 2----------------------------------
+
+The starter code contains a skeleton for a lambda named `operation` that is
+used as a predicate in several function calls on a `List`. Implement
+`operation` so the function calls produce the specified results.
+
+----------------------------------Exercise 3----------------------------------
+
+Define the function `sum(list: List<Int?>)` to add up the nullable `Int`s in
+`list`. Interpret `null` as zero.
+
+----------------------------------Exercise 4----------------------------------
+
+`all()`, `none()` and `any()` can be used to produce identical results.
+Implement the `List<Int>` extension functions `allNonZero()` and `hasZero()`
+using each of `all()`, `none()` and `any()`.
+
+-   `allNonZero()` checks that all elements in the list are non-zero.
+
+-   `hasZero()` checks that the list contains a zero.
+
+The implementations using `all()` are given in the starter code.
+
+Hint: You can negate the results of `all()`, `none()` or `any()`.
+

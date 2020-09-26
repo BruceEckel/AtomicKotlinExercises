@@ -1,0 +1,16 @@
+----------------------------------Exercise 1----------------------------------
+
+Implement a function named `demographic(people: List<Person>)` returning a
+`Map` where the key is age and the value is a list of names of people of that
+age.
+
+----------------------------------Exercise 2----------------------------------
+
+Implement `groupBy()` using `getOrPut()`.
+
+----------------------------------Exercise 3----------------------------------
+
+Implement `associateBy(keySelector: (T) -> R)` using `groupBy()`. If two
+elements have the same key produced by `keySelector` then the last one should
+be added to the `Map`.
+

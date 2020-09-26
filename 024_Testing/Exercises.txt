@@ -1,0 +1,18 @@
+----------------------------------Exercise 1----------------------------------
+
+Implement a function `abs()` that returns the absolute value of its parameter.
+Use `eq` to test it in `main()` using the arguments `0`, `42`, and `-239`.
+
+----------------------------------Exercise 2----------------------------------
+
+Implement `sum(a, b, c)` to return the sum of its three integer parameters.
+Test it using both `eq` and `neq` with at least five different argument
+combinations.
+
+----------------------------------Exercise 3----------------------------------
+
+Use Test Driven Development (first write a failing test, and then write the
+code to fix it) to calculate the area of a quadrangle. The starter code
+already contains some tests and your task is to add more. Start with the
+sample code and fix the intentional bugs.
+

@@ -1,0 +1,35 @@
+----------------------------------Exercise 1----------------------------------
+
+Attempt to compile a function that takes two `vararg` parameters. In `main()`,
+display the resulting error message on the console.
+
+----------------------------------Exercise 2----------------------------------
+
+Write a function `printArgs()` with a `String` as the first parameter, and a
+`vararg` parameter of `Int` as the second parameter. `printArgs()` displays its
+arguments to the console: first the `String`, then the `Int`s, separated by
+commas and surrounded by square brackets.
+
+For example, the output for `printArgs("Numbers: ", 1, 2, 3)` should be:
+
+Numbers: [1, 2, 3]
+
+HINT: Use `toList()` on the `vararg` parameter to get the requested `String`
+representation.
+
+----------------------------------Exercise 3----------------------------------
+
+Write a function `listOfChunks()` that takes a `vararg` parameter of type
+`String` and creates a `List` of `List`s of characters. The first parameter
+for `listOfChunks()` is the chunk size, and all nested `List`s except the last
+one will have this size.
+
+HINT: Use the standard library function `chunked()` on `List`.
+
+----------------------------------Exercise 4----------------------------------
+
+`flatten()` is the reverse operation for `chunked()` (from the previous
+exercise). This function is called on a `List` of `List`s and returns a single
+`List` of all elements from the nested `List`s. Implement `flatten()` without
+using the `flatten()` function from the standard library.
+

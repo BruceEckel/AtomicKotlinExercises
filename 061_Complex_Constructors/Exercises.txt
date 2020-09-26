@@ -1,0 +1,21 @@
+----------------------------------Exercise 1----------------------------------
+
+Modify `Alien` to use the "verbose" syntax: make `name` a constructor parameter
+rather than a property, add the `val` property `myName` and assign `name` value
+to the property `myName` inside the `init` section.
+
+----------------------------------Exercise 2----------------------------------
+
+Create a class called `SumChars` that takes `text: String` as a constructor
+argument. Add an un-initialized property `val sum: Int`. Inside `init`,
+define a local function `calc()` that sums up the integer values of each
+of the characters in `text`. Call `calc()` and assign the result to `sum`.
+
+----------------------------------Exercise 3----------------------------------
+
+Show that multiple init sections are executed in declaration order. The starter
+code contains `MultipleInit` class with a
+`val initOrder = mutableListOf<String>()` property. Add the `String`s `"one"`,
+`"two"` and `"three"` to the `initOrder` property in three different `init`
+blocks.
+

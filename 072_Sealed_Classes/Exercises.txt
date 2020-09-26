@@ -1,0 +1,21 @@
+----------------------------------Exercise 1----------------------------------
+
+Modify `SealedClasses.kt`. First, move the `capacity` property from `Bus` into
+the `Transport` class and add `trace("size ${transport.capacity}")` after the
+`when` expression in `travel()`. Then add new subclasses called `Tram`
+containing a `val route: String` and `Plane` containing a `val flightNumber:
+String`. Modify `travel()` to accommodate these new subclasses. Add `Tram` and
+`Plane` to the `List` in `main()`.
+
+----------------------------------Exercise 2----------------------------------
+
+Use `sealedSubclasses` to iterate through the classes in the previous
+exercise. For each class, `trace()` its `simpleName`.
+
+----------------------------------Exercise 3----------------------------------
+
+Modify `SealedSubclasses.kt` so that all the subclasses of `Top` are nested
+within `Top`. Create a seeded random-number generator by defining `val rand =
+Random(17)`. Use this generator to randomly select a subclass of `Top` and
+display its `simpleName`.
+

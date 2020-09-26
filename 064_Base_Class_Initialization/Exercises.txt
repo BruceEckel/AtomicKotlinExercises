@@ -1,0 +1,34 @@
+----------------------------------Exercise 1----------------------------------
+
+Create a class `A`. Inside its `init`, call `println("A")`. Inherit `B` from
+`A`. Inherit `C` from `B`. Give them similar `init`s. Inside `main()`, create
+an instance of `C` to display the initialization order.
+
+{{ excluded from Edu course -- it's the same as Exercise 3 in Inheritance;
+A is Game, B is BoardGame, C is Chess }}
+
+----------------------------------Exercise 2----------------------------------
+
+The starter code defines classes describing a dinner place setting:
+
+- `Plate`, and `DinnerPlate` inherit from `Plate`
+- `Utensil`, and then `Spoon`, `Fork` and `Knife` that all inherit from `Utensil`
+- `Custom` (as in "a cultural tradition")
+
+Inherit `PlaceSetting` from `Custom`. Inside `PlaceSetting`, create properties
+of type `Spoon`, `Fork`, `Knife` and `DinnerPlate`, in that order. `main()`
+creates an instance of `PlaceSetting` to show the initialization order.
+
+----------------------------------Exercise 3----------------------------------
+
+Define a class hierarchy with a parent class `Animal` and two children: `Cat`
+and `Dog`. Add a property `sound` of type `String` to `Animal`. Add the
+corresponding constructor parameters to the subclasses: `Cat` doesn't define
+its own `sound` property but only passes a `sound` value to the parent class.
+
+Provide different default values for `sound`: `???` for `Animal`,  `meow` for
+`Cat` and `woof` for `Dog`.
+
+Uncomment the code in `main()` to check the default values that are used when
+you create instances of specific classes.
+

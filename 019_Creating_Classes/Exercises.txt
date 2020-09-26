@@ -1,0 +1,34 @@
+----------------------------------Exercise 1----------------------------------
+
+Create a class named `SomeClass` with three member functions: `a()` which
+displays `42` on the console when you call it, `b()` which calls `a()`,
+and `c()` which calls `b()` by qualifying it.
+
+----------------------------------Exercise 2----------------------------------
+
+Create a class `Giraffe` with a single member function `displayID()` that
+displays the address of the object. Call `String`s `substringAfter()` to
+extract the address from the default object representation. Run the following
+code and compare the addresses:
+
+val giraffe1 = Giraffe()
+val giraffe2 = Giraffe()
+val giraffe3 = Giraffe()
+giraffe1.displayID()
+giraffe2.displayID()
+giraffe3.displayID()
+
+----------------------------------Exercise 3----------------------------------
+
+Create a `Robot` class with the following four member functions:
+`right(steps: Int)`, `left(steps: Int)`, `down(steps: Int)` and
+`up(steps: Int)`. Each function should display one of the following
+phrases on the console:
+
+Right N steps
+Left N steps
+Down N steps
+Up N steps
+
+where N is the provided number of steps.
+

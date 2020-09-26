@@ -1,0 +1,19 @@
+----------------------------------Exercise 1----------------------------------
+
+Create a class `Rocket` containing a member function `ignition()` that
+displays "Liftoff!". Create a function `launch()` that has a nullable `Rocket`
+parameter. Use a non-null assertion to call `ignition` on `rocket`. In
+`main()`, ensure that `launch()` throws an exception if you pass it a `null`.
+
+----------------------------------Exercise 2----------------------------------
+
+Implement the function `sumFirstAndLast(ints: List<Int>)` that returns a sum
+of the first and the last elements in `ints`. If `ints` is empty, return zero.
+If `ints` consists of a single element, return that element as the result.
+
+----------------------------------Exercise 3----------------------------------
+
+Implement `absValueMaxEqualsMin(ints: List<Int>)` that checks whether the
+maximum absolute value in `ints` equals the minimum absolute value in `ints`.
+If the list is empty, return `false`.
+

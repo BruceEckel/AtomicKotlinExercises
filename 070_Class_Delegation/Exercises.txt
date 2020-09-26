@@ -1,0 +1,33 @@
+----------------------------------Exercise 1----------------------------------
+
+Modify `ModelingMI.kt` by adding `fun resize(scale: Int): Int` to `Rectangle`,
+which just returns `scale`. Add a `fun rightClicked(): Boolean` to
+`MouseManager`. Call the new functions in `main()` and verify that `Button`
+needs no modifications to support the new interfaces.
+
+----------------------------------Exercise 2----------------------------------
+
+Exercise 1 in [Inheritance & Extensions](#inheritance-and-extensions) uses
+composition to adapt `Crocodile` to work with `interactWithDuck()`. This
+produces an inconsistency when using `IAmHonestlyDuck` with the
+`interactWithCrocodile()` function---the composed `crocodile` must be
+explicitly named during the call:
+
+interactWithCrocodile(honestlyDuck.crocodile)
+
+Modify the solution to that exercise using class delegation so you can call a
+function `interactWithCrocodile(honestlyDuck)`. Make the `IAmHonestlyDuck`
+`crocodile` parameter `private` so you *cannot* expose `field`.
+
+----------------------------------Exercise 3----------------------------------
+
+What happens when you delegate to two interfaces that have one or more
+members in common? The starter code contains two interfaces `A` and `B`
+that both have a `foo()` member function.
+
+Create a class `AImpl` that implements `A` and traces `"A.foo()"` for `foo()`
+and `"A.bar()"` for `bar()`. Create a similar implementation `BImpl` that
+implements `B`. Now create a class `Delegation` that delegates to both `A` and
+`B`. IntelliJ or the compiler will guide you in resolving the resulting
+issues.
+

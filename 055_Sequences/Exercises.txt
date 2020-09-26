@@ -1,0 +1,64 @@
+----------------------------------Exercise 1----------------------------------
+
+All exercises for this atom use the classes `Instructor`, `Student`, `Lesson`
+and `School` defined in `School.kt` in the starter code. These classes model an
+online language school that organizes remote lessons for an instructor and a
+group of students. Each student can sign up for classes with different
+instructors. After a lesson a student can rate that lesson, and these ratings
+are stored together with the other information about the lesson.
+
+Define the `School` extension function `commonLessons()` to find all the lessons
+that a student is taking with a particular instructor.
+
+----------------------------------Exercise 2----------------------------------
+
+Implement the `School` extension functions `studentInstructors()` and
+`studentsOf()`. The `studentInstructors()` parameter is a `Student`, and it
+finds all instructors that have classes with this student. `studentsOf()` takes
+`Instructor` as a parameter and finds all students that attend classes with
+this instructor.
+
+----------------------------------Exercise 3----------------------------------
+
+Implement the `School` extension function `averageInstructorRating()` that
+takes `Instructor` as a parameter and calculates the average rating that the
+instructor was given by all the students that attended his or her classes. If a
+student attended several lessons by that instructor, the ratings for individual
+lessons should be treated separately.
+
+----------------------------------Exercise 4----------------------------------
+
+Implement the `School` extension function `favoriteInstructor()`. It takes
+`Student` as a parameter and finds an instructor whose classes this student
+takes more often. If there are several such instructors, the first one is
+returned. If a student hasn't taken any classes yet, it returns `null`.
+
+----------------------------------Exercise 5----------------------------------
+
+Implement the `School` extension function `instructorsWithLargestClass()`. It
+first finds the maximum number of students that attended any one lesson. Then
+it finds all instructors that lead lessons with that number of students.
+
+----------------------------------Exercise 6----------------------------------
+
+Write a function `from(n: Int)` that generates an infinite sequence of
+integers, starting from n, then n + 1, n + 2, and so on.
+
+----------------------------------Exercise 7----------------------------------
+
+Write a function `oddWithout1()` that creates an infinite sequence of odd
+numbers starting with `3` that do not contain the digit `1` in its decimal
+representation:
+
+3, 5, 7, 9, 23, 25, 27, 29, 33 ...
+
+In `main()`, display on the console the sum of the first `20` elements of this
+sequence.
+
+----------------------------------Exercise 8----------------------------------
+
+Complete the function `fibonacci()` so it generates an infinite sequence
+of Fibonacci numbers. Each new Fibonacci number is the sum of the previous two.
+The first two numbers are `0` and `1`, which produces the following sequence:
+`0, 1, 1, 2, 3, 5, 8, 13, 21, ...`.
+

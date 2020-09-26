@@ -1,0 +1,49 @@
+----------------------------------Exercise 1----------------------------------
+
+Implement the function `zipWithIndex()` using `zip()`. Return a `List` of
+`Pair`s, where the first item in a `Pair` is the element, and the second item
+is the index of that element.
+
+----------------------------------Exercise 2----------------------------------
+
+Repeat Exercise 1 using `mapIndexed()` instead of `zip()`.
+
+----------------------------------Exercise 3----------------------------------
+
+Reimplement the `authorBooksMap()` function from [Data Classes](#data-classes),
+using operations for manipulating collections. `authorBooksMap()` takes a
+`List<Book>` as a parameter and builds a `Map` from each `Author` to the
+`Book`s they have written.
+
+----------------------------------Exercise 4----------------------------------
+
+Implement the function `friendSuggestions(person: Person)` to return friends of
+friends of `person`, excluding those people who are already his or her friends.
+Consider the following friend connections:
+
+Alice - Bob
+Bob - Charlie
+
+`friendSuggestions()` should return Charlie for Alice, because Charlie is a
+friend of Alice's friend Bob and isn't yet a friend of Alice.
+
+The following example produces no friend suggestions for Alice, because Bob and
+Charlie are already her friends:
+
+Alice - Bob
+Alice - Charlie
+Bob - Charlie
+
+----------------------------------Exercise 5----------------------------------
+
+To better understand `flatten()` and `flatMap()` functions, implement
+`flatMap()` using `flatten()`.
+
+----------------------------------Exercise 6----------------------------------
+
+Implement `flatten()` using `flatMap()`.
+
+----------------------------------Exercise 7----------------------------------
+
+Implement `filter()` using `flatMap()`.
+

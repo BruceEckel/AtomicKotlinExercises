@@ -1,0 +1,36 @@
+----------------------------------Exercise 1----------------------------------
+
+Add the property `empty` to the `Cage` class with a getter that returns a
+`Boolean` indicating whether the `Cage` contains any `Hamster`s.
+
+----------------------------------Exercise 2----------------------------------
+
+Create a class `Accessible` containing `String` properties `mutable` and
+`readOnly`. Add the appropriate custom property accessors to make each
+property fit its name.
+
+Initialize the `mutable` property with an empty `String`. Its accessors should
+display `mutable:get` and `mutable:set`. The `readOnly` property should
+display `readOnly:get` and return the value of `mutable`.
+
+----------------------------------Exercise 3----------------------------------
+
+Create a class `MessageStorage` with two properties: a `private` one named
+`_messages` of type `MutableList<String>` and a `public` one named `messages`
+of type `List<String>`. The custom getter for `messages` returns `_messages`.
+
+Since `_messages` is `private`, its contents can be only changed within the
+`MessageStorage` class. Define an `addMessage()` member function that takes a
+`String` parameter and adds it to the `_messages` list.
+
+----------------------------------Exercise 4----------------------------------
+
+Create a class `AccessCounter` containing a property `accesses` which tells how
+many times this property was accessed.
+
+HINT: `accesses` calculates a new value each time it is accessed.
+
+HINT: Introduce an auxiliary `private _accesses` property to store the number
+of accesses. For each access, increment `_accesses` in its getter. The Kotlin
+style guide recommends naming auxiliary properties with a leading underscore.
+

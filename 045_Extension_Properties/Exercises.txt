@@ -1,0 +1,15 @@
+----------------------------------Exercise 1----------------------------------
+
+Implement `secondOrNull` and `penultimateOrNull` (from the exercises in the
+previous atom) as extension properties.
+
+----------------------------------Exercise 2----------------------------------
+
+Implement `reversed` (from the exercises in the previous atom) as an extension
+property.
+
+----------------------------------Exercise 3----------------------------------
+
+Define a class `Rectangle` with two `Int` properties: `width` and `height`. Add
+an extension property `isSquare` that checks whether `width` equals `height`.
+

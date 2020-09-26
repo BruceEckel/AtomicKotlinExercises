@@ -1,0 +1,25 @@
+----------------------------------Exercise 1----------------------------------
+
+Display to the console all of the following `String`s that can't be converted to
+`Double` (that is, those where an attempt to convert it throws an exception):
+
+"12", "1.2", "1,2", "1.2e0", "1.2e1",
+"1.2e2", "1.2e3", "1.2e10", "12.3e10",
+"1.2e-1", "1.2e-10".
+
+----------------------------------Exercise 2----------------------------------
+
+Write a function called `abort()` that takes a `String` parameter, then throws a
+plain `Exception` object, passing the `abort()` argument to the `Exception`
+constructor. In `main()`, call `abort()` with an argument of `"Stop!"` and use
+`capture` to verify the result.
+
+----------------------------------Exercise 3----------------------------------
+
+Implement a function named `repeatChar()` that takes parameters `c` (the
+character to be repeated) and `n` (the number of times to repeat it) and
+returns a `String` consisting of `c` repeated `n` times. The function throws
+an `IllegalArgumentException` if `n` is negative. The exception message should
+be `"Count 'n' must be non-negative, but was x."` where `x` is replaced with
+the value of `n`.
+

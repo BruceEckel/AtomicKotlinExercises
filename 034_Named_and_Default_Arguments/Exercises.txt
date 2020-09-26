@@ -1,0 +1,28 @@
+----------------------------------Exercise 1----------------------------------
+
+Define a `Rectangle` class with a constructor that takes parameters of `side1:
+Double`, `side2: Double` and `color: String`. Assign default arguments of
+`1.0` for `side1`, `2.0` for `side2` and `"yellow"` for `color`. Add a
+`toString()` that produces: `"$color Rectangle $side1 x $side2"`. In `main()`,
+show all possible ways to call the constructor.
+
+----------------------------------Exercise 2----------------------------------
+
+Define a class `SimpleTime` that stores the time elapsed from the beginning of
+the day. `SimpleTime`'s constructor takes four parameters: `hours`, `minutes`,
+`seconds` and `nanoseconds`. Each parameter has a default value of zero.
+
+Implement two member functions, `toSecondOfDay()` and `toNanoOfDay()`, that
+return the number of seconds or nanoseconds elapsed since the beginning of the
+day.
+
+----------------------------------Exercise 3----------------------------------
+
+Implement a `joinComments()` function which takes a `String` parameter
+containing comment text. `joinComments()` joins the lines of the comment text,
+removing newlines and using a default of `;` as the line separator. It removes
+the comment slashes along with any whitespace after the slashes (`// `).
+
+Hint: Use the extension function `lines()` to split a `String` into a list of
+lines.
+

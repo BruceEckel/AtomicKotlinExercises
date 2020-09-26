@@ -1,0 +1,16 @@
+----------------------------------Exercise 1----------------------------------
+
+Create a function `checkSign()` that checks whether an integer number is
+positive, negative, or zero, and returns a `String` "positive", "negative" or
+"zero" as a result.
+
+----------------------------------Exercise 2----------------------------------
+
+Create a function `abs()` that returns the absolute value of its parameter:
+for example, `abs(3)` is `3` and `abs(-5)` is `5`.
+
+----------------------------------Exercise 3----------------------------------
+
+Create a function `findMax()` that finds the maximum value when given two
+integer arguments.
+

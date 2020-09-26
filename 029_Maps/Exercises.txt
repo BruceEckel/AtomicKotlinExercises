@@ -1,0 +1,31 @@
+----------------------------------Exercise 1----------------------------------
+
+Write the function `buildNumberToContactMap(contactList: List<Contact>)` that
+returns a `Map` with numbers as keys and `Contact`s as values. When two
+`Contact`s have the same key, the last `Contact` in `contactList` with that
+key is the one that appears in the resulting `Map`.
+
+----------------------------------Exercise 2----------------------------------
+
+`Cage` objects store `Hamster`s. `Cage` has a fixed size, so you can't put
+another `Hamster` in a `Cage` if it's already full.
+
+For this exercise, `Hamster`s are stored in a `List`. In the next exercise,
+`Map` will be used instead of `List`.
+
+Implement `get(name: String)` as a member function for `Cage` so it returns the
+`Hamster` with `name`. Implement `remove(name: String)` as a member function
+for `Cage` so it removes the `Hamster` with `name`. In both cases, if there's
+no `Hamster` with that `name`, throw `NoSuchElementException`.
+
+----------------------------------Exercise 3----------------------------------
+
+If you commonly select elements from a `List` using keys, it makes sense to
+optimize by using a `Map` instead of a `List`. A `Map` finds an element in
+constant time. With a `List`, in the worst case you must iterate over every
+element.
+
+Change the internal implementation of the `Cage` class to store elements in a
+`Map` rather than a `List`. To get an element use the `getValue()` member
+function, which throws `NoSuchElementException` if the key is missing.
+

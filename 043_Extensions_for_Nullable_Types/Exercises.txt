@@ -1,0 +1,19 @@
+----------------------------------Exercise 1----------------------------------
+
+Implement a `String` extension function `orEmpty()` that returns the receiver
+`String` if it is not `null`, and an empty `String` if the receiver is `null`.
+(Note that the Kotlin standard library contains `orEmpty()`).
+
+----------------------------------Exercise 2----------------------------------
+
+Implement `and()` and `or()` functions that extend a nullable `Boolean`. These
+functions each take a second nullable `Boolean` as a parameter and return
+`null` if either the receiver or the argument is `null`. For non-`null` values
+these functions behave the same as ordinary `and` and `or` operations.
+
+----------------------------------Exercise 3----------------------------------
+
+The starter code contains a `data` class called `Container`. Write extension
+functions for nullable `Container`s called `empty()` and `full()` checking
+that the `contents` is `null` or not `null` accordingly.
+

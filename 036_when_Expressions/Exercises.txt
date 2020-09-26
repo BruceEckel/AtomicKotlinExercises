@@ -1,0 +1,51 @@
+----------------------------------Exercise 1----------------------------------
+
+Create a function `cloudiness(cloudPercent: Int)` that returns a description
+based on the percentage of cloudiness: "Sunny" (when `cloudPercent` is in the
+range 81..100), "Mostly Sunny" (61..80), "Partly Sunny" (41..60), "Mostly
+Cloudy" (21..40), and "Cloudy" (0..20). If the argument is not in the range
+0..100, throw `IllegalArgumentException`.
+
+----------------------------------Exercise 2----------------------------------
+
+Create a function `temperature()` that takes a temperature in Celsius as a
+parameter and returns the corresponding description ("Hot", "Warm", "Cool",
+"Cold" or "Freezing"):
+
+| Description     | Temperature      |
+|-----------------|------------------|
+| Hot             | 25 C and Above   |
+| Warm            | From 15 to 24 C  |
+| Cool            | From 5 to 14 C   |
+| Cold            | From -5 to 4 C   |
+| Freezing        | Below -5 C       |
+
+There are no upper or lower bounds on the argument.
+
+----------------------------------Exercise 3----------------------------------
+
+Implement the function `balanced()` that takes a `String` parameter. The
+argument must consist of parentheses and optional spaces; for example:
+`"()(())"`. When you pass this argument to `balanced()`, it checks whether each
+opening parenthesis has a corresponding closing parenthesis and if all
+parentheses are properly nested.
+
+Ignore whitespace in the input `String`. If the `String` contains characters
+other than parentheses and whitespace, throw an `IllegalArgumentException`.
+
+Some examples:
+
+-   `"()"` is balanced
+
+-   `"(()"` is unbalanced
+
+-   `")("` is unbalanced
+
+-   `"( ()() )"` is balanced
+
+-   `"*()"` produces an `IllegalArgumentException`
+
+HINT: Iterate over the `String` and count the number of left parentheses that
+are unmatched after each step. At the end, this number should be 0. If the
+number is less than zero, the argument is unbalanced.
+

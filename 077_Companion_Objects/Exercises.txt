@@ -1,0 +1,106 @@
+----------------------------------Exercise 1----------------------------------
+
+The idea of the *Factory* shown in `CompanionFactory.kt` becomes more
+interesting when you introduce multiple factories, so the same configuration
+can easily create different types of objects.
+
+Start with two interfaces:
+
+interface Vendor {
+  fun pencil()
+  fun pen()
+}
+
+interface VendorFactory {
+  fun create(): Vendor
+}
+
+Create `Vendor1` and `Vendor2` that implement `Vendor`. The member functions
+use `trace()` to report the `Vendor` class name and "pencil" or "pen". Each
+`Vendor` implementation also has a companion object with a `factory` property
+containing an anonymous inner class that implements `VendorFactory`.
+
+Now write a standalone function `consumer(factory: VendorFactory)` that uses
+`factory` to create a `Vendor`. Use that `Vendor` to call `pencil()` and
+`pen()`. The starter code in `main()` will validate your solution.
+
+----------------------------------Exercise 2----------------------------------
+
+Begin with these two interfaces:
+
+interface BoardGame {
+  fun move(): Boolean
+  companion object {
+    fun createBoard() {
+      trace("BoardGame.createBoard()")
+    }
+  }
+}
+
+interface GameFactory {
+  fun create(): BoardGame
+}
+
+Create two classes, `Checkers` and `Chess`, which inherit `BoardGame`. Give
+them both `private` constructors with no arguments. Each class should contain a
+`companion object Factory: GameFactory` that calls `createBoard()` in its
+constructor. Each companion object contains a `const val max` that is used
+within `move()`. The definitions of `playGame()` and `main()` are provided;
+complete the code in `Checkers` and `Chess` so it satisfies the tests in
+`main()`.
+
+----------------------------------Exercise 3----------------------------------
+
+Create this class:
+
+data class ID(
+  val name: String,
+  val id: String = idGenerator()
+) {
+  companion object {
+    // ...
+    private fun idGenerator() = TODO()
+    fun test(n: Int) = List(n) {
+      ID(('a' + it).toString())
+    }
+  }
+}
+
+`ID` only contains a companion object with `idGenerator()` and the code to
+support that function: the `size` of each `id`, a random-number generator
+seeded to the value of `47`, and a `source` of the characters used to randomly
+create the `id`. In `main()`, the output is checked using `test()`, which
+generates a `List` of `n` `ID` objects -- modify your code until it matches the
+`test()` output in `main()`.
+
+Now complete this class:
+
+class Bank(val name: String) {
+  // Accounts applied for, but not completed:
+  private val applied = TODO()
+  private val accounts = TODO() // Completed
+  private class Account(val name: String) {
+    var id: ID? = null
+    private var number: Long? = null
+    fun addID(verifiedID: ID) = TODO()
+    companion object Numbers {
+      private fun nextAccountNumber() = TODO()
+    }
+    fun finish() = TODO()
+    override fun toString() = "$id $number"
+  }
+  fun applyForAccount(name: String) = TODO()
+  fun addID(id: ID) = TODO()
+  fun completeAccount(verifiedID: ID) = TODO()
+  override fun toString() =
+    accounts.joinToString("\n")
+}
+
+This is an example of the *Builder* pattern, for a class that requires multiple
+steps during object creation. `applyForAccount()` begins the creation of a new
+`Account` and adds it to the `applied` list. `addID()` adds an `ID` object to
+the `Account`, and `completeAccount()` takes an `ID`, adds an account `number`,
+and moves the `Account` from the `applied` to the `accounts` list.
+
+The starter code in `main()` will validate your solution.
+

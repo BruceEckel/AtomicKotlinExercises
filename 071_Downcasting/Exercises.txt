@@ -1,0 +1,42 @@
+----------------------------------Exercise 1----------------------------------
+
+Modify `NarrowingUpcast.kt` to call the functions in the extended interface.
+First, changed `Derived1` and `Derived2` by adding calls to `trace` for each
+function. The `trace` argument is the class name and function; for example
+`fun h() = trace("Derived2.h()")`.
+
+Now write a function `checkAndCall(b: Base)` so that it calls the polymorphic
+member function, then uses a `when` to downcast and call the extended-interface
+functions.
+
+----------------------------------Exercise 2----------------------------------
+
+Modify `FindType.kt` to use `filterIsInstance()`. First find all `Dog` objects,
+then map each of the resulting objects onto `bark()` and test the result using
+`atomictest.eq`. Notice that `filterIsInstance()` produces a sequence of
+already-downcast `Dog` objects.
+
+There's a second, more dynamic form of `filterIsInstance()`, which takes a
+*class object* as a parameter. Pass `Dog::class.java` as the argument to
+`filterIsInstance()`, with the rest of the expression as described in the
+previous paragraph. How is this version of `filterIsInstance()` different from
+the version that uses a generic argument?
+
+----------------------------------Exercise 3----------------------------------
+
+Create an empty interface `Animal1`. Inherit a class `Worm1` with a member
+function `wriggle()` that calls `trace("Wriggle")`. Inherit a class `Snail1`
+with a member function `slide()` that calls `trace("Slide")`. Inherit a class
+`Beetle1` with a member function `walk()` that calls `trace("Walk")`.
+
+Write a function `move(a1: Animal1)` that uses a `when` to detect each type and
+call that type's function. In `main()`, create a `List` of `Animal1` objects
+and call `move()` for each one.
+
+Create a duplicate hierarchy from an interface `Animal2`, but in this case make
+`move()` a member of `Animal2` and implement it in `Worm2`, `Snail2`, and
+`Beetle2`. In `main()`, create a `List` of `Animal2` objects and call `move()`
+for each one.
+
+Compare the type-checked hierarchy to the polymorphic hierarchy.
+

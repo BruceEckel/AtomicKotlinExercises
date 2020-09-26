@@ -1,0 +1,35 @@
+----------------------------------Exercise 1----------------------------------
+
+Demonstrate that you can put a local function inside another local function by
+writing a function `f()` that returns the result of its local function `g()`
+which in turn returns the result of *it's* local function `h()`, which simply
+returns the value `47`.
+
+----------------------------------Exercise 2----------------------------------
+
+The `createCounter()` function creates a pair of functions for managing the
+counter. Instead of creating a class, we manipulate the counter using only
+functions.
+
+In `createCounter()` define a local variable `counter`. Then define two local
+functions:
+
+-   `inc()`: increases the `counter` value by one
+
+-   `value()`: returns the value of `counter`
+
+Finally, return a pair of function references to these local functions:
+
+`return Pair(::inc, ::value)`
+
+The two local functions capture the same local variable `counter`. This style
+of managing state is commonly used in pure functional programming languages
+that don't have classes.
+
+----------------------------------Exercise 3----------------------------------
+
+Complete the implementation of the `createContainer()` function. It returns a
+pair of functions to control the `Int` container. The first function adds an
+`Int` element to the container, the second function removes an element from the
+container and returns it. If the container is empty, it returns `null`.
+

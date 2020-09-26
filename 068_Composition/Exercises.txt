@@ -1,0 +1,35 @@
+----------------------------------Exercise 1----------------------------------
+
+The starter code contains the classes `Shape`, `Circle` and `Rectangle`.
+`Circle` and `Rectangle` use composition and store an instance of `Shape`.
+Modify them to use inheritance instead.
+
+----------------------------------Exercise 2----------------------------------
+
+The starter code contains implementations of `Stack` and `Queue` classes.
+
+`Stack` provides a last-in-first-out access to elements. You can add ("push")
+new elements to it, and get ("pop") the last one that was added.
+
+`Queue` provides a first-in-first-out access to elements. You can add new
+elements to it, and get ("poll") returns you the first one that was added.
+
+In the starter code, both `Stack` and `Queue` extend `ArrayList`, which opens
+too many methods in the public API (for example, you can get the first element
+in `Stack`, which contradicts its design). Use composition instead of
+inheritance to implement `Stack` and `Queue`.
+
+----------------------------------Exercise 3----------------------------------
+
+Based on your solution for the previous exercise, modify the implementation of
+`Queue` by using `ArrayDeque` from the Kotlin standard library instead of
+`MutableList`. `ArrayDeque` represents a "double ended queue", so it provides
+member functions to add last and remove first elements.
+
+Note how with composition you can change the internal implementation of the
+class without changing the code that uses that class.
+
+`ArrayDeque` is currently experimental in the Kotlin library, so we must add
+`@OptIn(ExperimentalStdlibApi::class)` to turn off the warnings about using
+experimental functionality.
+

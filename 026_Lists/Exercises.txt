@@ -1,0 +1,26 @@
+----------------------------------Exercise 1----------------------------------
+
+The Kotlin standard library contains many functions that work with `Lists`.
+It's educational to implement some of them by hand.
+
+Write a function `findMax()` that finds the maximum value in a `List` of
+*natural numbers* (positive whole numbers). If the `List` is empty, return
+zero. `findMax()` takes `IntList` as a parameter---this is an example class in
+the starter code that only allows you to iterate over a `List`'s contents, get
+its size and access elements by index.
+
+----------------------------------Exercise 2----------------------------------
+
+Count the number of times a given element occurs in an `IntList`.
+
+----------------------------------Exercise 3----------------------------------
+
+Write a function to determine whether two `String`s are anagrams. An anagram
+is a word formed by rearranging the letters of a different word, using all the
+original letters exactly once.
+
+HINT: Compare two sorted `Lists` of characters obtained from two `String`s.
+Convert a `String` to a `List` by calling `toList()`. If the `Lists` are equal,
+the words are anagrams. For example, for two anagrams "terrain" and "trainer"
+the sorted character `List` will be `[a, e, i, n, r, r, t]`.
+

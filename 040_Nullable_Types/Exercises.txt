@@ -1,0 +1,29 @@
+----------------------------------Exercise 1----------------------------------
+
+Change the `get()` member function in the `Cage` class, from the exercises in
+[Maps](#maps), so it returns `null` if the `Cage` doesn't contain a `Hamster`
+with the given name (the parameter to `get()`).
+
+----------------------------------Exercise 2----------------------------------
+
+Write a function called `zilch()` that takes no arguments, has a function
+return type of `String`, and returns `null`. Write a second function `zilch2()`
+which returns the result of calling `zilch()`, and also has an explicit return
+type.
+
+In `main()`, call `zilch()` and assign the result to a `var` that you
+explicitly type. Do the same for `zilch2()`. What must you do to get this code
+to compile?
+
+----------------------------------Exercise 3----------------------------------
+
+Create a function called `countHexadecimalNumbers(codes: List<String>)` that
+counts hexadecimal numbers contained in `codes`. It returns a `Map<String,
+Int>` where the key is a hexadecimal number and the value is the number of
+times that number occurs in `codes`.  If a `String` in `codes` doesn't contain
+a hexadecimal number, the function ignores it.
+
+HINT: Convert a `String` containing a hexadecimal code into an `Int` using
+`toIntOrNull(radix: Int)`, an extension function for `String`. Pass `16` as the
+radix.
+

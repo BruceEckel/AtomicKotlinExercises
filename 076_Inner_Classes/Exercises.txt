@@ -1,0 +1,54 @@
+----------------------------------Exercise 1----------------------------------
+
+Add a `hamster()` member function to `LocalInnerClasses.kt` with a local `val
+poke = "Squeak"` that returns an object of an anonymous inner class that
+extends `Pet`, with a `speak()` that produces `poke + home()`.
+
+----------------------------------Exercise 2----------------------------------
+
+Although an inner class contains a reference to the outer-class object that
+creates it, the reverse is not true. If the outer class needs a reference to
+the inner-class object, it must create and initialize that reference itself.
+
+Create a `class Box(contains: String, label: String)`, with `inner` classes
+`Contents` holding `contains` as a `val`, and `Destination` holding `label` as
+a `val`. Make two `private` references: `contents` and `destination`,
+initialized to instances of their associated `inner` classes.
+
+Now create a `private val x` that is initialized to an object of an anonymous
+inner class. In this case, however, the base-class is `Any`. Include a member
+function `f()` that returns `"Any-based"`.
+
+Add a member function `manifest()` that produces a `String` containing the
+properties `contains` and `label` and the output of `f()`. The starter code in
+`main()` tests your solution.
+
+----------------------------------Exercise 3----------------------------------
+
+Define a `class Container<T>(iterable: Iterable<T>)` with a property `items`
+which is a `MutableList<T>`. Initialize `items` using `iterable` as its data
+source. Include a function `add(x: T)` that adds an element to `items`. Define
+a member function `selector()` that returns an object of an anonymous inner
+class that implements:
+
+interface Selector<T> {
+  fun end(): Boolean
+  fun current(): T
+  fun next()
+}
+
+`end()` tells whether you're at the end of the `items` `List`, `current()`
+returns the current element pointed to by the `Selector`, and `next()` moves
+to the next element in the `List`.
+
+Define a standalone function `<T> traceAll(select: Selector<T>)` that uses
+`select` to append all the values of `current()` to `trace` using `+=`, then
+returns `trace`.
+
+Now make `Container` inherit from `Iterable<T>`, and add a function called
+`iterator()` that returns an instance of an anonymous inner class that inherits
+from `Iterator<T>`. Add a standalone function `<T> traceAll2(ib: Iterable<T>)`
+that produces the same behavior as `traceAll()`.
+
+The starter code contains a `main()` with tests to verify your code.
+

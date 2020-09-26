@@ -1,0 +1,36 @@
+----------------------------------Exercise 1----------------------------------
+
+Create a file-level `private fun f()` and `private val p`. The starter code in
+`main()` will show you how to write these. Now duplicate `f()` and `p` inside
+`object Space` and again in `private object Space2`, and get these to work
+according to the code in `main()`. Notice the changes required to make `f()`
+available in `main()`. Compare the different approaches.
+
+----------------------------------Exercise 2----------------------------------
+
+Add more nesting to `ObjectNesting.kt`. Inside both the `Nested` objects, add
+another `Nested` object that looks the same as its enclosing `Nested`, with the
+same name and property, and an appropriate `String` for `a`. The code in
+`main()` provides tests. Notice how the namespaces work.
+
+----------------------------------Exercise 3----------------------------------
+
+Starting with:
+
+interface AdventureGame {
+  interface Environment
+  interface Character
+  val environment: Environment
+  val characters: MutableList<Character>
+  fun populate()
+}
+
+Define a class `Jungle` which is an `Environment`, and classes `Monkey` and
+`Snake` that are each `Character`s. Within each class, place an `object
+Factory` with a `create()` function. Give `Monkey` and `Snake` a `toString()`
+that returns their class name.
+
+Now define an `object MonkeysVsSnakes` which is an `AdventureGame`, using the
+various `create()` functions to initialize it. `populate()` only needs to add
+one `Monkey` and one `Snake`. The predefined `main()` will test your code.
+

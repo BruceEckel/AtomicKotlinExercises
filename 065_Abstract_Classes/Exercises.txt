@@ -1,0 +1,35 @@
+----------------------------------Exercise 1----------------------------------
+
+Create an `abstract class Shape` with two `abstract` methods, `draw()` and
+`erase()`, each producing the default (`Unit`) return type. Inherit `Circle`,
+`Square` and `Triangle` from `Shape`, and override the `abstract` methods to
+call `println()` with `"Draw Circle"`, `"Erase Circle"`, etc. `main()`
+creates a `List` called `shapes` containing one of each subtype. Call `draw()`
+for each object in the `List`, then `erase()` for each object in the `List`, to
+match the exercise output.
+
+----------------------------------Exercise 2----------------------------------
+
+The starter code attempts to use multiple inheritance with `abstract` classes.
+It defines `Movable` and `Sleepable` `abstract` classes and tries to define
+the class `Sofa` which inherits both.
+
+Convert `Movable` and `Sleepable` to interfaces to make the code compile.
+
+----------------------------------Exercise 3----------------------------------
+
+The starter code contains an `abstract` class `Instrument` that contains an
+`abstract` member function `play(n: Note)`. `Note` is defined as an `enum` with
+values `A`-`G`.
+
+The classes `Wind`, `Percussion` and `Stringed` all inherit `Instrument`,
+overriding `play()` in each case so it returns a `String` containing the class
+name, then `blow` for `Wind`, `strike` for `Percussion`, and `pluck` for
+`Stringed`, and finally the `Note` being played.
+
+Add two constructor arguments to `Instrument`: `name` and `action`, and pass
+the corresponding values in the subclasses. Make `name` and `action` `val`
+properties and provide an implementation of `play()` in the superclass so that
+it returns the same value that was previously produced by the `play()` in each
+subclass. Remove implementations of `play()` from the subclasses.
+

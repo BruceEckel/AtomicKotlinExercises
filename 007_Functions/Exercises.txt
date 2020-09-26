@@ -1,0 +1,15 @@
+----------------------------------Exercise 1----------------------------------
+
+Create a function `squareInt()` that takes an `Int` parameter and
+returns its mathematical square.
+
+----------------------------------Exercise 2----------------------------------
+
+Create a function `sumDoubles()` that takes three `Double` parameters
+and returns their sum.
+
+----------------------------------Exercise 3----------------------------------
+
+Create a function `duplicate()` that takes a `String` parameter
+and returns that `String` repeated twice.
+

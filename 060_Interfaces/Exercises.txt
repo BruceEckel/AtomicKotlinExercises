@@ -1,0 +1,27 @@
+----------------------------------Exercise 1----------------------------------
+
+Create a `Cloud` class that implements `Computer` and contains a `List<Node>`.
+The `data class Node(result: Int)` should also implement `Computer`, and should
+implement `calculateAnswer()` so it simply returns `result`.
+
+Write the `Cloud` constructor to take an argument `n` indicating the number of
+`Node`s in the cloud. Count up to `n` and place each count as the `result`
+value of the `Node` you are currently creating. Implement `Cloud`s
+`calculateAnswer()` to return the sum of the `result`s in all the `Node`s.
+
+----------------------------------Exercise 2----------------------------------
+
+Define a `Pet` interface with a `speak()` function that returns a `String`.
+Implement three different `Pet`s: `Dog` which produces `"Bark!"`, `Cat` which
+produces `"Meow!"` and `Hamster` which produces `"Squeak!"`. In `main()`, create a
+`List<Pet>` containing all three types of `Pet`. Iterate through the `List` and
+print the result of `speak()` for each `Pet`.
+
+----------------------------------Exercise 3----------------------------------
+
+Now define a property `sound` of the `String` type inside the `Pet` interface
+and implement it inside classes to return `dog`, `cat`, and `hamster`
+appropriately. In `main()`, as in the previous task, create a `List<Pet>`
+containing all three types of `Pet` and iterate through the `List` and print the
+value of `sound` for each `Pet`.
+

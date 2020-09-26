@@ -1,0 +1,98 @@
+----------------------------------Exercise 1----------------------------------
+
+Create a class named `Boring` with three member functions: `a()` returns
+`1.618`, `b()` returns "ratio", and `c()` returns `11`. Test `Boring` using
+`atomictest`.
+
+----------------------------------Exercise 2----------------------------------
+
+Create a class named `Boring2` that is just like `Boring` except it has
+constructor parameters, which are all `val`s. The parameter `a` holds the value
+that `a()` produces, the parameter `b` holds the value that `b()` produces, and
+`c` holds the value produced by `c()`. Test `Boring2` using `atomictest`.
+
+----------------------------------Exercise 3----------------------------------
+
+Create a `FixedHolder` class with a constructor parameter that sets the
+maximum number of `Any` objects that can be held. Add read-only `size` and
+`full` properties. If the user calls `add()` when it's `full`, throw an
+`IllegalStateException`.
+
+----------------------------------Exercise 4----------------------------------
+
+Create a `Dictionary` class that stores translations for words. It includes a
+member function `addTranslations(word: String, translations: String)`. The
+`translations` for `word` are delimited by whitespaces. If `word` is already
+present in the `Dictionary`, `addTranslations()` throws an
+`IllegalArgumentException` with the message
+`"Dictionary already has translations for '$word'"`.
+
+`Dictionary` also contains a read-only `translations` property that is a `Map`
+of `List`s containing `String`s. The keys for the `Map` are also `String`s.
+
+HINT: Use `split(" ")` on `String` to split words by whitespace.
+
+HINT: Define an auxiliary property called `_translations` containing a mutable
+`Map` of translations. Reading the `translations` property should simply return
+`_translations` as a read-only `Map`.
+
+----------------------------------Exercise 5----------------------------------
+
+Create two functions `va1()` and `va2()`. Each function should take a variable
+argument list of `Int`s. `va1()` should display `"va1:"` on the console and
+then display its arguments, each on its own line. `va2()` should display
+`"va2:"` and then pass its argument list to `va1()`.
+
+----------------------------------Exercise 6----------------------------------
+
+Modify the `Temperature` class so that `fahrenheit` and `celsius` are
+properties with getters and setters.
+
+----------------------------------Exercise 7----------------------------------
+
+Convert a natural number into a number in the Roman numeral system.
+
+Roman numerals:
+1000 = M, 900 = CM, 500 = D, 400 = CD, 100 = C, 90 = XC,
+50 = L, 40 = XL, 10 = X, 9 = IX, 5 = V, 4 = IV, 1 = I.
+
+For example: 23 = XXIII, 44 = XLIV, 100 = C.
+
+HINT: Perform the conversion in steps. Use an auxiliary `remainder`
+variable to store the remaining part of the converted integer and the `result`
+variable to store the resulting Roman numeral representation. For each step,
+the initial `number` equals the sum of the `remainder` and `result`.
+
+Store the Roman numerals in a mapping from `Int` to the associated `String`
+representation. For each pair `int = roman` starting from `1000 = M`:
+
+-   Divide `remainder` into `int` to discover how many times you need to repeat
+    `roman` in the `result`.
+
+-   Subtract the result from `remainder` to update it:
+    `remainder -= remainder / int`.
+
+----------------------------------Exercise 8----------------------------------
+
+Convert from a Roman number into a natural number. For
+example: XXIII = 23, XLIV = 44, C = 100.
+
+HINT: Simply iterate over each digit in the Roman number and calculate the
+answer. Traverse a Roman number in reverse order, a single digit at a time (for
+example, `IV` contains two digits) and store the maximum value found so far. If
+the next Roman digit is greater than or equal to the current maximum value, add
+it to the result. If it's less than the maximum, subtract it instead. For
+example, to convert `XLIV = 44`, iterate over `VILX` which is the reverse of
+`XLIV`. You add `V`(`5`) and `L`(`50`), but subtract `1`(`I`) because it's less
+than the current maximum `V`, and subtract `10`(`X`) because it's less than the
+updated maximum `X`:
+
+| numeral | current maximum | action |
+| ------- |-----------------|--------|
+| V       | 5               | + 5    |
+| I       | 5               | - 1    |
+| L       | 50              | + 50   |
+| X       | 50              | - 10   |
+
+The result is `+ 5 - 1 + 50 - 10 = 44`
+

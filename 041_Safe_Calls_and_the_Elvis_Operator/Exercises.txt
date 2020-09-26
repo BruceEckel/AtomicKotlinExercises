@@ -1,0 +1,26 @@
+----------------------------------Exercise 1----------------------------------
+
+Write a function called `downcase()` that accepts a nullable `String` and
+returns a `String`. The result is the lowercased argument if it is not `null`,
+and an empty `String` if it is. Implement this function using safe calls
+and the Elvis operator.
+
+----------------------------------Exercise 2----------------------------------
+
+The starter code contains a `data class` called `Client`. Implement an
+extension function for `Client` called `fromMunich()` that returns a `Boolean`
+indicating whether a client's city is "Munich". If the city is unspecified the
+function returns `false`.
+
+----------------------------------Exercise 3----------------------------------
+
+Implement an extension function for `Client` called `fullInfo()` that returns
+a `String`. This result contains the properties of the class as in the example
+below. If a property is `null`, use `"Unspecified"` for its value:
+
+name: Alice
+email: alice@gmail.com
+country: Germany
+city: Munich
+street: Unspecified
+

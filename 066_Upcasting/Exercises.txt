@@ -1,0 +1,54 @@
+----------------------------------Exercise 1----------------------------------
+
+The starter code contains a `Rodent` interface and its two implementations:
+`Mouse` and `KangarooRat`. `Rodent` declares the functions `eat()` and
+`speak()`, which must be implemented in the subclasses. `KangarooRat` adds a
+`jump()` function.
+
+Create a function `upcast(rodent: Rodent)` that displays the result of `eat()`
+and `speak()` using `println()`. Show that the compiler won't allow you to call
+`jump()`.
+
+`main()` creates an instance of `Mouse` and `KangarooRat`, and shows that you
+can call `jump()` for the latter and pass both objects into `upcast()`. Guess
+the output of `main()`, then run `main()` to check your guess.
+
+----------------------------------Exercise 2----------------------------------
+
+Upcasting also happens when you add an object of a derived type into a
+container that holds the base type.
+
+The starter code contains an interface `Apple` containing an abstract member
+function `consume()`. From `Apple`, inherit `GrannySmith`, `Gala`, `Fuji` and
+`Braeburn`. Override `consume()` so, respectively, they return `chomp
+GrannySmith`, `bite Gala`, `press Fuji` and `peel Braeburn`.
+
+`main()` creates a `List<Apple>` and populates it with the specific types of
+`Apple`. Iterate through the list displaying the result of `consume()` for each
+object.
+
+----------------------------------Exercise 3----------------------------------
+
+When you combine interfaces to create a class, you can upcast an object of that
+class to each different interface.
+
+The starter code contains three interfaces: `Fight` with a function `fight()`,
+`Swim` with a function `swim()`, and `Fly` with a function `fly()`, and a class
+`ActionCharacter` with a `fight()` function that returns `"ActionCharacter
+fight"`.
+
+Define a class `Hero` that combines `ActionCharacter`, `Fight`, `Swim` and
+`Fly`. Notice that the `fight()` in `ActionCharacter` provides the `fight()`
+needed by the `Fight` interface. Define `swim()` to return `"Hero swim"` and
+`fly()` to return `"Hero fly"`.
+
+Next, implement `tryFight(x: Fight)`, `trySwim(x: Swim)`, `tryFly(x: Fly)`,
+and `doAction(x: ActionCharacter)`, so that each function calls the member
+function available to its parameter and displays its result on the console.
+
+In `main()`, make a `Hero` object and pass it to each of the functions
+`tryFight()`, `trySwim()`, `tryFly()`, and `doAction()`. Run `main()` to check
+the output. Notice that passing a `Hero` to each function upcasts it so that,
+inside the function, `Hero` loses its specific type and becomes the parameter
+type.
+

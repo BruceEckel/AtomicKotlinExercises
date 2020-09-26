@@ -1,0 +1,18 @@
+----------------------------------Exercise 1----------------------------------
+
+Create a class `Floating` that contains a `val d` of type `Double`. Initialize
+`d` in the constructor. Include a `toString()` member function that returns the
+contents of `d`. Write a `main()` to exercise the `Floating` class.
+
+----------------------------------Exercise 2----------------------------------
+
+Continue developing the `Robot` class from the exercises in the previous atom.
+Convert the properties storing the size of the field and the current
+coordinates into `Robot` constructor parameters.
+
+----------------------------------Exercise 3----------------------------------
+
+Add a `toString()` function that returns the `String` `Robot(x=..., y=...)` where
+the actual values of `x` and `y` are substituted for the ellipses. For example,
+if `x` is 1 and `y` is 2 it should return `Robot(x=1, y=2)`.
+

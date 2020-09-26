@@ -1,0 +1,107 @@
+----------------------------------Exercise 1----------------------------------
+
+Define `var x = 1`. Now define `val y = x` and `val z = y`. Next, assign
+2 to `x` and display the values of all three identifiers on different lines:
+first `x`, then `y`, then `z`.
+
+----------------------------------Exercise 2----------------------------------
+
+Create a function `other()` that takes a `String` parameter and returns a
+`String` containing every other letter of the parameter. For example, the
+argument "cement" produces "cmn".
+
+----------------------------------Exercise 3----------------------------------
+
+Write a function `first()` that has an *expression body* starting with `if`.
+The function takes three `Boolean` parameters and "ands" them together to
+produce the result. Write `second()` to do the same but "or" all three
+parameters. In `main()`, display the result of combining `first()` and
+`second()` using both "and" and "or":
+
+| `first()` Arguments | `second()` Arguments |
+|---------------------|----------------------|
+| true, true, true    | false, false, false  |
+| true, false, true   | false, true, false   |
+
+----------------------------------Exercise 4----------------------------------
+
+This exercise modifies `Overflow.kt` to test `Long` and `Double`. Implement
+`testLong()` to display the `Long` maximum value incremented by `1`. Make
+`testDouble()` display the `Double` maximum value incremented by `1`. Make
+`testDouble2()` display the result of comparing `Double.MAX_VALUE` and
+`Double.MAX_VALUE + 1`.
+
+----------------------------------Exercise 5----------------------------------
+
+Implement `everyFifth()` to display every fifth number in the given range. For
+example, `everyFifth(11, 30)` displays the numbers `15`, `20`, `25`, and `30`.
+
+----------------------------------Exercise 6----------------------------------
+
+Implement `everyFifthNonWhitespace()` to display every fifth non-whitespace
+character in the given text. For example, `everyFifthNonWhitespace("abc d e fgh
+ ik")` displays the characters `e` (fifth character if not counting
+whitespaces) and `k` (tenth).
+
+----------------------------------Exercise 7----------------------------------
+
+Write a function that uses a `while` loop to count the occurrences of a given
+digit within a decimal number. Place the decimal number in a `var` called
+`worker`. Each pass through the loop tests the right-most digit of `worker`,
+then at the end of the loop, removes that right-most digit from `worker`. The
+`var occurrences` contains the number of occurrences of the digit you seek.
+
+This table shows the values during each loop while finding occurrences of `1`
+in `121341`:
+
+| `worker` | Removed | `occurrences` |
+|----------|---------|---------------|
+| 121341   | -       | 0             |
+| 12134    | 1       | 1             |
+| 1213     | 41      | 1             |
+| 121      | 341     | 1             |
+| 12       | 1341    | 2             |
+| 1        | 21341   | 2             |
+| -        | 121341  | 3             |
+
+The "Removed" values are in the table for clarity, but you don't need a
+"Removed" variable in your solution.
+
+----------------------------------Exercise 8----------------------------------
+
+Reverse the digits in a decimal number using a `while` loop. An auxiliary
+`var worker` will help you iteratively produce the `result`:
+
+| Worker     | Result |
+|------------|--------|
+| 1234       | 0      |
+| 123        | 4      |
+| 12         | 43     |
+| 1          | 432    |
+| 0          | 4321   |
+
+----------------------------------Exercise 9----------------------------------
+
+Display a triangle. For n = 6 the function `showTriangle()` should produce the
+following:
+
+     #
+    ###
+   #####
+  #######
+ #########
+###########
+
+---------------------------------Exercise 10----------------------------------
+
+Create a function `showSnake(rows: Int, columns: Int)` that displays a table
+filled with sequential numbers in a form of snake. For example, `showSnake(3,
+3)` should produce the following:
+
+ 0 1 2
+ 5 4 3
+ 6 7 8
+
+For proper alignment, use `"%3d".format(number)` to place any necessary spaces
+before the number.
+

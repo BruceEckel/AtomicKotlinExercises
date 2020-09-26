@@ -1,0 +1,33 @@
+----------------------------------Exercise 1----------------------------------
+
+Implement a function `readNumbers()` that reads user input in an infinite loop.
+When the user enters zero, it `break`s from the loop and prints the sum of the
+entered numbers. If the user enters a non-number, it prints "Not a number:
+$input" and goes back to accepting input.
+
+----------------------------------Exercise 2----------------------------------
+
+Complete the implementation of the functions `analyzeStrings1()` and
+`analyzeStrings2()` provided in the starter code. Each function takes a
+`List<List<String>>` as an argument and displays its contents to the console.
+If a `String` is the word `"stop"`, don't display any more elements from the
+current (inner) `List`. The code in `analyzeStrings1()` uses `break`, while
+`analyzeStrings2()` uses `continue`. Add the missing labels for `break` and
+`continue`.
+
+Now rewrite `analyzeStrings1()` without using labels.
+
+HINT: You can remove all the labels from `analyzeStrings1()` and `break` will
+jump from the closest inner loop, so this loop doesn't need labels.
+
+----------------------------------Exercise 3----------------------------------
+
+This exercise demonstrates how you can replace `break` and `continue` with
+`return` by extracting code into new functions.
+
+The functions `usingBreak()` and `usingContinue()` are provided in the starter
+code. Your task is to extract part of `usingBreak()` into `analyzeList()` and
+part of `usingContinue()` into `analyzeElement()` so that `break` and
+`continue` can be replaced with `return` without changing the logic of these
+functions.
+

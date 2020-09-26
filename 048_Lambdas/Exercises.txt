@@ -1,0 +1,18 @@
+----------------------------------Exercise 1----------------------------------
+
+The starter code contains a partially-implemented `transform()` function with a
+lambda. Complete the lambda so it produces the results in `main()`.
+
+----------------------------------Exercise 2----------------------------------
+
+The starter code contains `data` classes for `Author` and `Book`. Write the
+function `getAuthors(books: List<Book>)` to return the `Set` of `Author`s whose
+books are contained in `books`.
+
+----------------------------------Exercise 3----------------------------------
+
+The starter code contains a `data` class for `Student`. Implement the function
+`registerStudents(names: List<String>, startId: Int = 0)` to produce a
+`List<Student>` from a `List<String>`. Assign different `id`s to students
+starting from `startId`.
+

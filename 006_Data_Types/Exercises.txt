@@ -1,0 +1,37 @@
+----------------------------------Exercise 1----------------------------------
+
+Declare a `var` called `answer` of type `Int` and set its value to `42`. In the
+next line try to reassign `answer` to the `String` "unknown". What error does
+Kotlin produce?
+
+Remove the `Int` type specification. Does the error change?
+
+Display the first line of the error produced by Kotlin.
+
+----------------------------------Exercise 2----------------------------------
+
+Attempt to combine various `val`s of different types using the `+` operator.
+Only combine two at a time, and assign each combination to a `val` result. See
+which types combine. On the console, display the name of the type that can be
+combined with any other type if it goes first, and the name of the type that
+can't be combined with itself using `+`.
+
+Replace the lines containing `TODO()` in the solution code with working code.
+If you don't remove these lines, you'll see an error saying "Operation is not
+implemented."
+
+----------------------------------Exercise 3----------------------------------
+
+Guess the results of the following expressions and then check your guesses
+using Kotlin:
+
+val c1 = 'a' + 1
+val c2 = 'a' + 25
+val c3 = 'E' - 2
+
+You can open the hint within IntelliJ IDEA to understand the results.
+
+HINT: Characters are stored as numbers corresponding to their
+[ASCII codes](https://en.wikipedia.org/wiki/ASCII), so adding an integer to a
+character produces a new character corresponding to the new code value.
+

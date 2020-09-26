@@ -1,0 +1,36 @@
+----------------------------------Exercise 1----------------------------------
+
+Write a tail recursive function called `simulation()` that takes a `String`
+called `group` and an `Int` called `level`. It displays  `"Simulation: $group
+Reality: level"`, then calls itself with `level - 1` as long as `level` is
+greater than zero.
+
+----------------------------------Exercise 2----------------------------------
+
+Implement `factorial()` using an auxiliary tail recursive function.
+
+----------------------------------Exercise 3----------------------------------
+
+Implement `fibonacci()` as an iterative function, without recursion. The
+tail recursive version is given for comparison.
+
+----------------------------------Exercise 4----------------------------------
+
+The starter code provides a class `City`. Implement an extension function
+`City.allReachable()` that builds a set of all cities reachable from the
+current `City`. Implement it in two ways: recursive and iterative.
+
+The direct connections for each `City` are stored in its `connections`
+property. `allReachable()` should return all the cities reachable from the
+given city via other cities. The city is reachable from itself, so it should be
+also present in the resulting set.
+
+For example, consider the following connections graph:
+
+Cities: Dublin, Liverpool, Manchester, Leeds
+Connections: Liverpool - Manchester; Manchester - Leeds
+
+Both Manchester and Leeds are reachable from Liverpool, while Dublin isn't. The
+path from Liverpool to Leeds goes via Manchester. Thus, `allReachable()` for
+Liverpool should return the set of three cities: Liverpool, Manchester, Leeds.
+

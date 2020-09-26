@@ -1,0 +1,42 @@
+----------------------------------Exercise 1----------------------------------
+
+Create a class `X` that contains three `Int` properties: `a` and `b` are `val`s
+and `c` is a `var`. Initialize `a` to 3, `b` to 42, and `c` to zero. Create an
+`add()` member function that sums `a` and `b` and assigns the result to `c`,
+then returns `c`. Write a `main()` to test `X`.
+
+----------------------------------Exercise 2----------------------------------
+
+A `Robot` object starts in the `(0, 0)` cell and can move right, left, up and
+down. Its location is stored as a pair of coordinates `(x, y)`, where `(0, 0)`
+is the top-left corner:
+
+(x, y)
+(0, 0) (1, 0)
+(0, 1) (1, 1)
+
+Moving right increases the `x` coordinate, moving down increases the `y`
+coordinate, while moving left and up decrease the `x` and `y` coordinates.
+
+Implement `Robot`'s member functions `right()`, `left()`, `up()` and `down()`,
+each of which takes a `steps` parameter. Also implement `getLocation()` which
+returns the `Robot`'s coordinates as a `String` in the form `(x, y)`.
+
+----------------------------------Exercise 3----------------------------------
+
+A `Robot` can move within a square field of size `100 x 100`. The borders of
+this field are "looped": if the robot is in cell `(0, 0)` and moves up one
+step, it arrives in cell `(0, 99)`.
+
+(0, 0)
+// up(1)
+(0, 99)
+// left(10)
+(90, 99)
+
+Modify `right()`, `left()`, `up()` and `down()` to implement this behavior.
+
+HINT: Write an auxiliary ("helper") member function named `crossBoundary()` to
+check the boundaries. This eliminates repetition and simplifies the resulting
+code.
+

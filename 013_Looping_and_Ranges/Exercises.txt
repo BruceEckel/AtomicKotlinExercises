@@ -1,0 +1,32 @@
+----------------------------------Exercise 1----------------------------------
+
+Using a `for` loop, create a function that calculates the factorial of its
+parameter (`n! = 1 * 2 * ... * n`).
+
+Put an `L` at the end of a number literal or use `.toLong()` to convert an
+integer constant or expression to type `Long`.
+
+----------------------------------Exercise 2----------------------------------
+
+Using a `for` loop, create a function that sums the factorials up to its
+parameter (`1! + 2! + ... + n!`).
+
+----------------------------------Exercise 3----------------------------------
+
+Using a `for` loop, create a function that sums up only even numbers up to its
+parameter.
+
+----------------------------------Exercise 4----------------------------------
+
+Display half of a triangle. For an argument of 6 the function
+`showHalfTriangle()` should display the following:
+
+#
+##
+###
+####
+#####
+######
+
+Now rewrite the function to use `repeat` instead of a `for` loop.
+

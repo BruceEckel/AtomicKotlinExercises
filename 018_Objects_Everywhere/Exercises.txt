@@ -1,0 +1,39 @@
+----------------------------------Exercise 1----------------------------------
+
+Palindromes are words or phrases that read the same forward and backward. For
+example:
+
+-   "mom" is a palindrome
+
+-   "dad" is a palindrome
+
+-   "rotator" is a palindrome
+
+-   "streets" is *not* a palindrome
+
+Write a function that checks whether a word or phrase is a palindrome.
+
+HINT: `String`'s `reversed()` member function may prove useful here. Use `==`
+to check whether two `String`s are equivalent.
+
+----------------------------------Exercise 2----------------------------------
+
+Building on the previous exercise, ignore upper and lower case when testing for
+palindromes. "Bob" should now be considered a palindrome.
+
+HINT: Use `toLowerCase()` to produce a `String` with all lower-case characters.
+You can also use `toUpperCase()`.
+
+----------------------------------Exercise 3----------------------------------
+
+Building on the previous exercise, strip out special characters before testing.
+"Madam I'm Adam" should now be considered a palindrome.
+
+HINT: Build a new `String` consisting of letters only, and check whether it's
+a palindrome. Use `in` to check whether a character is a letter:
+`ch in 'a'..'z' || ch in 'A'..'Z'`.
+
+----------------------------------Exercise 4----------------------------------
+
+Reverse the digits in an integer number using `String` conversion.
+

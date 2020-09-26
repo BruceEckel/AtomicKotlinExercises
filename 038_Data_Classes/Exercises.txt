@@ -1,0 +1,32 @@
+----------------------------------Exercise 1----------------------------------
+
+Create a `data` class called `AirlineTicket` containing the following fields:
+
+-   `firstName: String`
+
+-   `lastName: String`
+
+-   `ticket: Int`
+
+-   `origin: String`
+
+-   `destination: String`
+
+----------------------------------Exercise 2----------------------------------
+
+Create an extension function called `transferTicket()` that copies an
+`AirlineTicket` object, replacing `firstName` and `lastName` with the new
+values during the copy:
+
+fun AirlineTicket.transferTicket(
+  otherFirstName: String,
+  otherLastName: String
+): AirlineTicket
+
+----------------------------------Exercise 3----------------------------------
+
+The starter code contains definitions for the `data` classes `Author` and
+`Book`. Write a function called `createAuthorToBooksMap()` that takes a `List`
+of books as its parameter. It builds and returns a `Map` with `Author` as the
+key that maps to to the `List<Book>` written by that author.
+

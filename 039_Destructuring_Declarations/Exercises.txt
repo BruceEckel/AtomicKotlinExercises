@@ -1,0 +1,50 @@
+----------------------------------Exercise 1----------------------------------
+
+Using `Pairs.kt` as a model, write a function `calculate(n1: Int, n2: Int)`
+which returns a `Triple` containing a `Boolean` and two `Int`s. If either `n1`
+or `n2` is less than zero, it returns a `Triple` containing `false` and two
+zeros. Otherwise, it returns a `Triple` containing:
+
+-   `true`
+
+-   The sum of `n1` and `n2`
+
+-   `n1` multiplied by `n2`
+
+The starter code contains a `main()` with tests, showing the different between
+unpacking the `Triple` using `first`, `second` and `third` versus a
+destructuring declaration.
+
+----------------------------------Exercise 2----------------------------------
+
+If you do not define a class as a `data` class, you must add extra functions to
+allow that class to be used in a destructuring declaration. Start with
+`Computation.kt` and remove the `data` from the definition of `Computation`.
+The code no longer compiles. IntelliJ IDEA will prompt you and automatically
+fill in the skeleton definitions for `operator fun component1()` and `operator
+fun component2()`, or you may do this by hand. (Note: we do not cover the
+`operator` keyword until [Operator Overloading](#operator-overloading), but you
+don't need to understand it for this exercise). Provide the correct bodies for
+these functions and show that the rest of the code still works without
+modifying it. Consider how much more work (and visual noise) results from more
+fields in the class, and how much effort is saved by using `data` classes.
+
+----------------------------------Exercise 3----------------------------------
+
+The starter code contains a `data` class `Person` with two properties: `name:
+String` and `age: Int`. Write a `displayPersonInfo()` function that takes a
+parameter of `person: Person`, which it destructures using the following
+syntax:
+
+val (name, age) = person
+
+`displayPersonInfo()` should display the corresponding values on the console:
+
+Name: $name
+Age: $age
+
+Add a new second property `surname` between `name` and `age` in `Person`. The
+first property should be `name` and the third property should be `age`. Don't
+modify `displayPersonInfo()`. In `main()`, show that `displayPersonInfo()` now
+works incorrectly.
+

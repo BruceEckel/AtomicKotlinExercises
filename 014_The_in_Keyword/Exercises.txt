@@ -1,0 +1,25 @@
+----------------------------------Exercise 1----------------------------------
+
+Create a `String` by iterating over a range of characters that you define. The
+resulting `String` should contain all English letters in alphabetical order:
+"abc...z".
+
+----------------------------------Exercise 2----------------------------------
+
+Use `step` to write a function that sums only even numbers up to a given
+number (the parameter).
+
+----------------------------------Exercise 3----------------------------------
+
+Write a function that checks whether a character is a lowercase letter.
+
+HINT: Test to see whether its code is between the codes for `a` and `z`.
+
+----------------------------------Exercise 4----------------------------------
+
+Write a function that checks whether its `String` parameter is a valid
+identifier. A valid identifier is a non-empty `String` that starts with a letter
+or underscore and consists of only letters, digits and underscores.
+
+Use `s.isEmpty()` to check whether `s` is an empty `String`.
+

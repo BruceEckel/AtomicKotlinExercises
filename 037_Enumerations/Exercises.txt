@@ -1,0 +1,39 @@
+----------------------------------Exercise 1----------------------------------
+
+This exercise refactors the `Robot` class used in section II. Replace the four
+functions `right()`, `left()`, `down()` and `up()` with one function `go()`
+that takes an additional `Direction` parameter specifying the direction of
+movement.
+
+The location is stored as a pair of coordinates `(x, y)`, where `(0, 0)` is the
+top-left corner:
+
+(x, y)
+(0, 0) (1, 0)
+(0, 1) (1, 1)
+
+Moving right increases the `x` coordinate, moving down increases the `y`
+coordinate, moving left and up decrease the `x` and `y` coordinates.
+
+----------------------------------Exercise 2----------------------------------
+
+Implement two extension functions `Month.getAustralianSeason()` and
+`Month.getDays(leapYear: Boolean)`. The `leapYear` parameter should have a
+default argument of `false`.
+
+In Australia, the seasons are defined by grouping the calendar months:
+
+-   Spring: The transition months September, October and November
+
+-   Summer: The hottest months December, January and February
+
+-   Autumn: The transition months March, April and May
+
+-   Winter: The coldest months June, July and August
+
+----------------------------------Exercise 3----------------------------------
+
+Implement a `winner()` function to determine the winner in the
+rock–paper–scissors game (See
+[Wikipedia](https://en.wikipedia.org/wiki/Rock%E2%80%93paper%E2%80%93scissors)).
+

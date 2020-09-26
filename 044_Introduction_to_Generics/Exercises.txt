@@ -1,0 +1,36 @@
+----------------------------------Exercise 1----------------------------------
+
+Implement two generic extension functions for `List`:
+
+- `secondOrNull()` returns the second element in the `List`.
+
+- `penultimateOrNull()` returns the second to the last element in the `List`.
+
+In both cases, return `null` if the list contains less than two elements.
+
+----------------------------------Exercise 2----------------------------------
+
+Implement a generic `reversed()` extension function for `List`, which returns a
+new `List` containing the same elements but in reverse order.
+
+This function already exists in the standard Kotlin library, but for learning
+purposes you should implement it from scratch.
+
+HINT: Use `N downTo 0` to iterate through the indices in reverse order.
+
+----------------------------------Exercise 3----------------------------------
+
+Create a generic class called `CountingSet` that counts how many times each
+element was added to it. Implement it using a `private Map`. It should define
+three member functions:
+
+-   `add(element: E)` adds a new element. If the client programmer tries to
+    `add()` an element that is already in the `CountingSet`, the corresponding
+    counter should be increased.
+
+-   `count(element: E)` returns the number of times each element was added to
+    the `CountingSet`. If the element isn't present in `CountingSet` the result
+    is zero.
+
+-   `toSet()` returns a set of stored elements.
+

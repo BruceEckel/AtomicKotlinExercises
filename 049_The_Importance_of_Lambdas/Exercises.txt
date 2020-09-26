@@ -1,0 +1,19 @@
+----------------------------------Exercise 1----------------------------------
+
+The starter code defines a `Person` class. Create an extension function to
+`List<Person>` called `getNamesOfAdults()` that returns the names of all
+people older than 17.
+
+----------------------------------Exercise 2----------------------------------
+
+Implement the function `filterNonBlank(strings: List<String>)` that returns a
+`List<String>` with all blank `String`s removed from `strings`.
+
+----------------------------------Exercise 3----------------------------------
+
+Implement the function `other(s: String)` that returns a `String` containing
+every other letter of `s`. For example, for an input of "cement" it returns
+"cmn".
+
+HINT: You can use `filterIndexed()` to filter characters based on index.
+
